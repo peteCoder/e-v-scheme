@@ -8,6 +8,10 @@ class Credentials(models.Model):
 
     def __str__(self):
         return f"Username: {str(self.username)} -- Password: {str(self.password)}"
+    
+    class Meta:
+        verbose_name_plural = "Credentials"
+        verbose_name = "Credential"
 
 
 

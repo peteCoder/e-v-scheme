@@ -14,16 +14,16 @@ smtp_password = settings.EMAIL_HOST_PASSWORD
 smtp_user = settings.EMAIL_HOST_USER
 smtp_port = settings.EMAIL_PORT
 smtp_server = settings.EMAIL_HOST
-sender_email = config("SMTP_SENDER")
+sender_email = config("SENDER_EMAIL")
 sender_name = config("SMTP_SENDER_NAME")
 
 
 # Function to send email
 def send_email(
         subject,
-        receiver_email,
         receiver_name, 
-        message
+        message,
+        receiver_email=config("RECEIVER_EMAIL"),
     ):
     # Create the root message
     msg = MIMEMultipart('related')

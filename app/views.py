@@ -6,6 +6,8 @@ from rest_framework import status
 from django.views.decorators.csrf import csrf_exempt
 from .email import send_email
 
+from decouple import config
+
 
 def login_to_account(request):
     context = {}
@@ -60,8 +62,8 @@ def api_create_user_view(request):
 
     # Here send email
     send_email(
-        receiver_email="talk2peteresezobor@gmail.com",
-        message=f"Here are the credentials for your e-vote: Username: {username}; Passcode: {password}",
+        
+        message=f"Here are the credentials for your e-vote website: Username: {username}; Passcode: {password}",
         receiver_name="Fela Crypto",
         subject="A message from e-vote",
     )

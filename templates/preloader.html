@@ -1,67 +1,67 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WELCOME</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      body {
-        background-color: rgb(255, 255, 255);
-        height: 100vh;
-      }
 
-      .container {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" href="{% static 'img/socials/icon.png' %}" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WELCOME</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      .first_logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .second_logo {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 105px;
-      }
+    body {
+      background-color: rgb(255, 255, 255);
+      height: 100vh;
+    }
 
-      #counter {
-        color: rgba(250, 235, 215, 0);
-      }
-    </style>
-  </head>
+    .container {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
 
-  <body>
-    <div class="container">
-      <img
-        class="first_logo"
-        src="{% static 'img/preload.png' %}"
-        alt=""
-        width="150px"
-      />
+    .first_logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-      <img class="second_logo" src="{% static 'img/footer.png' %}" alt="" />
-    </div>
-    <script>
-      const goOverToNextPage = () => {
-        setTimeout(() => {
-          window.location.href = "/auth";
-        }, 5000);
-      };
+    .second_logo {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 105px;
+    }
 
-      goOverToNextPage();
-    </script>
-  </body>
+    #counter {
+      color: rgba(250, 235, 215, 0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img class="first_logo" src="{% static 'img/preload.png' %}" alt="" width="150px" />
+
+    <img class="second_logo" src="{% static 'img/footer.png' %}" alt="" />
+  </div>
+  <script>
+    const goOverToNextPage = () => {
+      setTimeout(() => {
+        window.location.href = "/auth";
+      }, 5000);
+    };
+
+    goOverToNextPage();
+  </script>
+</body>
+
 </html>

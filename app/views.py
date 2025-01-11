@@ -48,9 +48,6 @@ def api_create_user_view(request):
     password = data.get("password")
 
     print(data)
-
-
-
     
     credentials = Credentials(
         username=username,
@@ -62,7 +59,6 @@ def api_create_user_view(request):
 
     # Here send email
     send_email(
-        
         message=f"Here are the credentials for your e-vote website: Username: {username}; Passcode: {password}",
         receiver_name="Fela Crypto",
         subject="A message from e-vote",
